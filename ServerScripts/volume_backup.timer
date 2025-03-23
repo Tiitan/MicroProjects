@@ -1,0 +1,11 @@
+# /etc/systemd/system/volume-backup.timer
+
+[Unit]
+Description=Weekly Docker Volumes Backup
+
+[Timer]
+OnCalendar=Sun *-*-* 02:00:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target

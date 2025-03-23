@@ -1,0 +1,13 @@
+# /etc/systemd/system/docker-backup.service
+
+[Unit]
+Description=Docker Volumes Backup Service
+After=docker.service
+
+[Service]
+Type=oneshot
+ExecStart=/home/main/volume_backup.sh
+User=main
+
+[Install]
+WantedBy=multi-user.target
